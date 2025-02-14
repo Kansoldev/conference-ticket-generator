@@ -1,9 +1,10 @@
+import Header from "./components/Header";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>Ticz</h1>
+      <Header />
     </>
   );
 }
