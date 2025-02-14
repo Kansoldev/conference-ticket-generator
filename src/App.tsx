@@ -135,12 +135,88 @@ function App() {
                   <button
                     type="button"
                     className="block bg-[#24a0b5] text-white w-full py-3 rounded-lg"
+                    onClick={() => setStep(2)}
                   >
                     Next
                   </button>
 
                   <button className="block w-full border border-solid border-[#24a0b5] text-[#24a0b5] py-3 rounded-lg mt-4 md:mt-0">
                     Cancel
+                  </button>
+                </div>
+              </div>
+
+              <div
+                id="attendee-details"
+                className={`${step !== 2 ? "hidden" : ""}`}
+              >
+                <div className="border border-solid border-[#166a79] rounded-[20px] text-white mt-10 p-5">
+                  <p className="mb-7">Upload profile photo</p>
+
+                  <div className="bg-[#041b20]">
+                    <div className="flex items-center justify-center bg-[#0e464f] h-52 w-full min-[600px]:w-1/2 mx-auto rounded-[30px] text-white text-center cursor-pointer">
+                      <span>Drag & drop or click to upload</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="form-group mb-5 mt-10">
+                  <label
+                    htmlFor="name"
+                    className="text-white mb-3 inline-block"
+                  >
+                    Enter your name
+                  </label>
+
+                  <input
+                    type="text"
+                    id="name"
+                    className="bg-transparent border border-solid border-[#166a79] inline-block p-3 rounded-[20px] w-full"
+                  />
+                </div>
+
+                <div className="form-group mb-5">
+                  <label
+                    htmlFor="email"
+                    className="text-white mb-3 inline-block"
+                  >
+                    Enter your email *
+                  </label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    className="bg-transparent border border-solid border-[#166a79] inline-block p-3 rounded-[20px] w-full"
+                  />
+                </div>
+
+                <div className="form-group mb-5">
+                  <label
+                    htmlFor="project"
+                    className="text-white mb-3 inline-block"
+                  >
+                    About the project
+                  </label>
+
+                  <textarea
+                    name=""
+                    id="project"
+                    rows={5}
+                    className="bg-transparent border border-solid border-[#166a79] inline-block p-3 rounded-[20px] w-full"
+                  ></textarea>
+                </div>
+
+                <div className="mt-6 flex flex-col md:flex-row md:gap-10 items-center bg-[#031e23]">
+                  <button
+                    type="button"
+                    className="block w-full border border-solid border-[#24a0b5] text-[#24a0b5] py-3 rounded-lg mt-4 md:mt-0 order-2 md:order-1"
+                    onClick={() => setStep((prevStep) => prevStep - 1)}
+                  >
+                    Back
+                  </button>
+
+                  <button className="block bg-[#24a0b5] text-white w-full py-3 rounded-lg order-1 md:order-2">
+                    Get My Free Ticket
                   </button>
                 </div>
               </div>
